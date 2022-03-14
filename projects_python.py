@@ -1,31 +1,31 @@
 import math
-
+#funcion suma
 def suma(a,b):
     s=a+b
     return print("El resultado: "+str(s)+".")
-
+#funcion resta
 def resta(a,b):
     r=a-b
-    print("El resultado: "+str(r)+".")
-
+    return print("El resultado: "+str(r)+".")
+#funcion producto
 def producto(a,b):
     p=a*b
-    print("El resultado: "+str(p)+".")
-
+    return print("El resultado: "+str(p)+".")
+#funcion radicacion
 def alertasAlgebraicasRadicaion(a):
     while a<0:
         print("El valor ingresado no debe ser negativo")
         a=float(input("Ingrese el valor nuevamente: "))
     raiz=pow(a,0.5)
     return print("El resultado: "+str(raiz)+".")
-
+#funcion division
 def alertasAlgebraicasDivision(a,b):
     while b==0:
         print("EL segundo valor debe ser distinto de cero")
         b=float(input("Ingrese el segundo valor nuevamente: "))
     division=a/b
     return print("El cociente es: "+str(division)+".")
-
+#funcion logaritmos
 def alertasAlgebraicasLogaritmos(base,argumento):
     while (float(base)<=0 or float(base)==1):
         print('El valor de la base debe ser diferente de 1 o menor o igual a 0, cambiela ahora!!!')
@@ -35,18 +35,18 @@ def alertasAlgebraicasLogaritmos(base,argumento):
         argumento=float(input("Ingrese el valor nuevamente: "))
     respuesta=math.log(argumento,base)
     return print("El resultado: "+str(respuesta)+".")
-
+#funcion exponencial
 def alertasAlgebraicasExponentes(base,exponente):
     while (float(base)<=0 or float(base)==1):
         print('El valor de la base debe ser diferente de 1 o menor o igual a 0, cambiela ahora!!!')
         base=float(input("Ingrese el valor nuevamente: "))
     respuesta=pow(base,exponente)
     return print("El resultado: "+str(respuesta)+".")
-
+#funcion potenciacion
 def ejecucionPotencia(a,b):
     respuesta=pow(a,b)
     return print("La potencia es: "+str(respuesta)+".")
-
+#funcion trigonometrica
 def ejecucionTrigonometria(a):
     definicion=int(input('''Seleccione la funcion trigonometrica a calcular:
                             1. Seno
@@ -67,8 +67,8 @@ def ejecucionTrigonometria(a):
         return print("La tangente del valor ingresado es: "+str(resultado) + '.')
 
 
-
-
+###################################################################################################################################################################################
+#menu del modulo de operaciones basicas
 def operaciones_basicas(val1,val2):
     while True:
         operacion=int(input("""Seleccione la operacion que desea:
@@ -143,6 +143,7 @@ def operaciones_basicas(val1,val2):
         else:
             print("No existe esa operacion!")
 
+#MENU PRINCIPAL
 def run():
     while True:
         opcion=int(input("""BIENVENIDO AL PROYECTO
@@ -167,6 +168,7 @@ def run():
         else:
             print('Ingrese una opcion valida!!!')
 
+#INICIO DEL PROGRAMA
 if __name__=='__main__':
     run()
 
